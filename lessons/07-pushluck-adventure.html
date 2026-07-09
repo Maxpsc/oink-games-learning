@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第七课：Oink 推运气与冒险类</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .game-section { border: 1px solid var(--rule); border-radius: 8px; margin: 2rem 0; overflow: hidden; }
+  .game-hd { display: flex; align-items: center; gap: 1.2rem; padding: 1rem; background: var(--callout-bg); border-bottom: 1px solid var(--rule); }
+  .game-hd img { width: 80px; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .game-hd h3 { margin: 0; border: none; padding: 0; font-size: 1.1rem; }
+  .game-hd .yr { font-size: 0.8rem; color: var(--muted); }
+  .game-bd { padding: 1rem; }
+  .pitch-box { border-left: 3px solid var(--accent); padding: 0.6rem 0.8rem; margin: 0.8rem 0; font-size: 0.9rem; background: #fdf8f0; }
+  .flow { margin: 1rem 0; padding: 1rem; background: var(--callout-bg); border-radius: 6px; font-size: 0.9rem; }
+  .flow h4 { margin: 0 0 0.5rem; }
+  .flow ol { margin: 0 0 0 1.5rem; }
+</style>
+</head>
+<body>
+
+<div class="lesson-meta">
+  第七课 · Oink Games 专题 · <a href="06-card-strategy.html">← 上一课</a> · <a href="../index.html">首页</a>
+</div>
+
+<h1>推运气与冒险——再走一步，还是见好就收？</h1>
+
+<p>这三款游戏的核心都是同一个问题：<strong>“再往前走一步，还是现在回头？”</strong>它们把 push-your-luck 机制演绎到了极致——让你在贪婪和恐惧之间反复横跳。</p>
+
+<!-- Deep Sea Adventure -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/deepsea-cover.png" alt="Deep Sea Adventure" loading="lazy">
+  <div><h3>Deep Sea Adventure · 海底探险 <span class="yr">2014</span></h3>
+  <span class="tag">推运气</span><span class="tag">共享资源</span><span class="tag">Oink 销量冠军</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>设计师：</strong>Jun Sasaki, Goro Sasaki | <strong>人数：</strong>2–6 | <strong>时长：</strong>30min | <strong>年龄：</strong>8+</p>
+  <p><strong>核心机制：</strong>Oink 史上最畅销的游戏（20 万+ 套），Game Market 首届大赏得主。所有玩家共乘一艘破潜水艇，<strong>共享一个氧气罐（25 点）</strong>。大家轮流掷两颗 d3 骰子（每颗面值 1-3）向下潜，捡海洋宝藏。关键规则：你携带的每一块宝藏<strong>会让你的移动速度减 1</strong>，而且每回合消耗的氧气等于你携带的宝藏数量。</p>
+
+  <div class="flow">
+    <h4>每回合流程</h4>
+    <ol>
+      <li><strong>决定方向：</strong>继续往下，还是掉头返回？</li>
+      <li><strong>耗氧：</strong>氧气 − 你带了几块宝藏</li>
+      <li><strong>掷骰移动：</strong>掷两颗 d3，点数 − 宝藏数 = 移动步数（可能为 0 甚至负数！）</li>
+      <li><strong>到达位置：</strong>选择捡或不捡该位置的宝藏（越深层的宝藏越值钱）</li>
+    </ol>
+  </div>
+
+  <ul>
+    <li><strong>越深越贵：</strong>宝藏分四层——三角形(0-3分)、方形(4-7分)、五边形(8-11分)、六边形(12-15分)</li>
+    <li><strong>贪婪的代价：</strong>捡太多宝藏 → 自己走得慢 + 氧气消耗快 → 拖死所有人</li>
+    <li><strong>死在路上：</strong>氧气耗尽前没回到潜艇 → 本轮所有宝藏沉入海底，被打包成 3 块一组</li>
+    <li><strong>三轮定胜负：</strong>每轮独立计分，三轮总分最高者获胜</li>
+  </ul>
+
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「Oink 最经典的游戏。大家共用一罐氧气下海捞宝，宝藏越深越值钱——但你捡得越多走得越慢、氧气耗得越快。一个人的贪婪会拖死全队。那句“我再捡一块就回头”基本上是说这句话的人第一个死。互坑神作。」<br><strong>适合：</strong>几乎所有人。聚会推新首选、家庭局、带点互坑的轻松局。Oink 的终极入门游戏。</div>
+</div>
+</div>
+
+<!-- Dungeon of Mandom -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/dungeonmandom-cover.png" alt="Dungeon of Mandom" loading="lazy">
+  <div><h3>23. Dungeon of Mandom · 地牢求生 <span class="yr">2013</span></h3>
+  <span class="tag">推运气</span><span class="tag">Bluffing</span><span class="tag">里程碑</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>人数：</strong>2–4 | <strong>时长：</strong>15min | <strong>年龄：</strong>9+</p>
+  <p><strong>核心机制：</strong>只用一个英雄（战士），装备极其有限。每回合有两件事可以做：(1) 从手中往地牢里塞一个怪物（让地牢更危险），或 (2) 拿走英雄的一件装备（让英雄更弱）。当你说“我觉得这英雄裸奔也能通关”时，你留下赌一把；觉得不行就退出。最后一个不退出的玩家，必须用被扒光装备的英雄去打满怪物的地牢。</p>
+  <ul>
+    <li>纯粹的反向 chicken game——谁最后退出谁受苦</li>
+    <li>盲目自信是最大的敌人</li>
+    <li>Oink 在小盒微策略领域的里程碑——后来英文版以 Welcome to the Dungeon 之名在全球大获成功</li>
+  </ul>
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「Oink 的地牢吹牛游戏。大家轮流往地牢里塞怪物，或者拿走英雄的装备。当你说“这英雄能赢”时留下，觉得不行就退出。最后一个没退的必须裸奔打怪。Oink 早期的里程碑之作。」<br><strong>适合：</strong>2-4 人快速吹牛局，喜欢“别怂”、“你敢我就敢”式互相挑衅的玩家。</div>
+</div>
+</div>
+
+<!-- Dungeon of Mandom VIII -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/dungeonmandomviii-cover.png" alt="Dungeon of Mandom VIII" loading="lazy">
+  <div><h3>21. Dungeon of Mandom VIII · 地牢求生 8 <span class="yr">2015</span></h3>
+  <span class="tag">推运气</span><span class="tag">Bluffing</span><span class="tag">升级版</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>人数：</strong>2–4 | <strong>时长：</strong>20min | <strong>年龄：</strong>9+</p>
+  <p><strong>核心机制：</strong>原版的豪华升级——8 个不同职业的英雄（战士、法师、盗贼等），每个有不同装备和技能。机制不变，但多职业带来的装备组合和技能差异让 bluffing 层次更深。8-bit 像素风视觉是 Oink 系列中独树一帜的存在。</p>
+  <ul>
+    <li>8 位英雄提供超多重开性——每局随机选择</li>
+    <li>原版的核心 chicken game 逻辑完全保留</li>
+    <li>像素视觉极具辨识度</li>
+  </ul>
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「地牢求生的豪华版——8 个不同职业、不同的装备和技能，每一局都不一样。核心还是那种“你敢留下吗”的互相挑衅。像素美术风格在 Oink 系列里独一无二。」<br><strong>适合：</strong>玩过原版/英文版 Welcome to the Dungeon 想要更多变化的玩家。</div>
+</div>
+</div>
+
+<!-- Stamps -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/stamps-cover.png" alt="Stamps" loading="lazy">
+  <div><h3>Stamps · 邮票 <span class="yr">2017</span></h3>
+  <span class="tag">竞标</span><span class="tag">成套收集</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>人数：</strong>3–5 | <strong>时长：</strong>20min | <strong>年龄：</strong>8+</p>
+  <p><strong>核心机制：</strong>邮票收集主题的竞标游戏（附赠）。玩家通过出价竞标不同面值的邮票，凑成套或序列来得分。Oink 中相对低调的一款，但邮票主题的视觉呈现非常精美。</p>
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「Oink 的邮票收集竞标游戏。如果你喜欢邮票主题或竞标机制，这款是隐藏宝藏。视觉非常精美。」<br><strong>适合：</strong>邮票/收集主题爱好者、竞标游戏粉丝。</div>
+</div>
+</div>
+
+<h2>Oink 全部 31 款学完总结</h2>
+
+<p>七节课下来，你覆盖了 Oink Games 从 2011 年到 2026 年几乎全部主要作品。回顾整体框架：</p>
+
+<table>
+  <tr><th>课</th><th>类别</th><th>游戏数</th><th>代表作</th></tr>
+  <tr><td>第一课</td><td>🤝 合作类</td><td>4</td><td>Moon Adventure, HEY YO, Order Overload: Cafe, The Frozen Passage</td></tr>
+  <tr><td>第二课</td><td>⚡ 反应拼图类</td><td>3</td><td>Meow Tiles, Town 66, Compress</td></tr>
+  <tr><td>第三课</td><td>🧠 策略博弈类</td><td>3</td><td>Fafnir, TRND, Fairtrade Souvenirs</td></tr>
+  <tr><td>第四课</td><td>🔍 推理社交类</td><td>5</td><td>iNSIDER BLACK, Fake Artist, In a Grove, Diamond Swap, Tricks & Phantom</td></tr>
+  <tr><td>第五课</td><td>🏃 速度反应类</td><td>7</td><td>Quickity Pickity, tomatomato, Mr. Face, Make the Difference, Nine Tiles / EX, Ninja Catfoot</td></tr>
+  <tr><td>第六课</td><td>🃏 卡牌策略类</td><td>6</td><td>SCOUT, Startups, Kobayakawa, Flotsam Fight, TROIKA, Twins</td></tr>
+  <tr><td>第七课</td><td>🎲 推运气冒险类</td><td>4</td><td>Deep Sea Adventure, Dungeon of Mandom / VIII, Stamps</td></tr>
+</table>
+
+<div class="callout"><strong>终极店员法则：</strong>31 款不用全记。记住每类的 1-2 款代表作和它们的“一句话卖点”。客人的三个问题（多少人、什么氛围、之前喜欢什么）会自动帮你缩小到 2-3 款。</div>
+
+<div class="followup">
+  <p>Oink 31 款全部学完。需要打磨推荐话术、做实战模拟、或者对比其他出版社？随时继续。</p>
+  <p><a href="../reference/quick-reference.html">📋 完整速查表（31 款）</a> · <a href="../index.html">🏠 首页</a></p>
+</div>
+
+<div class="lesson-nav">
+  <span><a href="06-card-strategy.html">← 第六课：卡牌策略类</a></span>
+  <span><a href="../reference/quick-reference.html">📋 完整速查表 →</a></span>
+</div>
+
+</body>
+</html>

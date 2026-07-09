@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第六课：Oink 卡牌策略类</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .game-section { border: 1px solid var(--rule); border-radius: 8px; margin: 2rem 0; overflow: hidden; }
+  .game-hd { display: flex; align-items: center; gap: 1.2rem; padding: 1rem; background: var(--callout-bg); border-bottom: 1px solid var(--rule); }
+  .game-hd img { width: 80px; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  .game-hd h3 { margin: 0; border: none; padding: 0; font-size: 1.1rem; }
+  .game-hd .yr { font-size: 0.8rem; color: var(--muted); }
+  .game-bd { padding: 1rem; }
+  .pitch-box { border-left: 3px solid var(--accent); padding: 0.6rem 0.8rem; margin: 0.8rem 0; font-size: 0.9rem; background: #fdf8f0; }
+</style>
+</head>
+<body>
+
+<div class="lesson-meta">
+  第六课 · Oink Games 专题 · <a href="05-speed-party.html">← 上一课</a> · <a href="../index.html">首页</a>
+</div>
+
+<h1>卡牌策略——手牌管理、博弈与精算</h1>
+
+<p>这六款是 Oink 最接近“传统卡牌游戏”的作品——但每一款都有一个让你意外的核心机制。从 SCOUT 的“不能重新排列手牌”到 Kobayakawa 的“每人只有一张牌”，极简中藏着极深的策略空间。</p>
+
+<!-- SCOUT -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/scout-cover.png" alt="SCOUT" loading="lazy">
+  <div><h3>SCOUT ·  scout <span class="yr">2019</span></h3>
+  <span class="tag">手牌管理</span><span class="tag">出清</span><span class="tag">Spiel des Jahres 提名</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>设计师：</strong>Kei Kajino | <strong>人数：</strong>2–5 | <strong>时长：</strong>20min | <strong>年龄：</strong>9+</p>
+  <p><strong>核心机制——不能重新排列手牌：</strong>这是 SCOUT 的灵魂。每张卡两端各有一个数字(1-10)。发牌时牌的顺序和朝向随机确定。你<strong>不能改变牌的顺序</strong>，只能选择是否将整副手牌翻转 180°（使用另一端的数字）。你要打出的必须是手中<strong>相邻的牌</strong>——因为你不能重新排列！</p>
+  <ul>
+    <li><strong>打出：</strong>出一组相邻的牌（顺子或同点），必须比桌上的牌更强。更大的组数 > 同组数比大小 > 同点胜顺子</li>
+    <li><strong>Scout（偷牌）：</strong>打不出时，从桌上牌的<strong>两端选一张</strong>拿走，插入自己手中任意位置。被拿牌的玩家得 1 分</li>
+    <li><strong>一轮结束：</strong>有人出空手牌或所有人连续 Scout。手中剩余牌扣分，之前靠 Scout 赚的牌加分</li>
+  </ul>
+  <p>SCOUT 获 2022 年 Spiel des Jahres 提名，是 Oink 在德国桌游奖上走得最远的作品。</p>
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「Oink 评分最高的游戏，Spiel des Jahres 提名。卡牌两端都有数字，你不能重新排列手牌——只能顺着打或者从别人那偷一张插进来调整。规则 3 分钟，但深度惊人。Oink 的招牌之作之一。」<br><strong>适合：</strong>喜欢卡牌游戏、手牌管理的策略玩家。3-5 人最佳。Oink 卡牌类的终极推荐。</div>
+</div>
+</div>
+
+<!-- Startups -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/startups-cover.png" alt="Startups" loading="lazy">
+  <div><h3>Startups · 初创公司 <span class="yr">2016</span></h3>
+  <span class="tag">投资</span><span class="tag">持股</span><span class="tag">Bluffing</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>设计师：</strong>Jun Sasaki | <strong>人数：</strong>3–7 | <strong>时长：</strong>20min | <strong>年龄：</strong>10+</p>
+  <p><strong>核心机制：</strong>6 家公司的股票卡混在一起。你手中有 3 张牌。每回合必须抽一张（从牌堆盲抽→往市场上每张牌放 1 块钱；或从市场拿一张→同时拿走上面所有的钱），然后打一张到自己的持股区或市场。</p>
+  <ul>
+    <li><strong>反垄断规则：</strong>一旦你成为某家公司的最大股东，你就<strong>不能再从市场拿那家公司的卡</strong>——只能从手里自己打</li>
+    <li><strong>终局计分：</strong>每家公司的最大股东向所有小股东<strong>每人每张收 1 块钱</strong>（面值翻 3 倍）</li>
+    <li><strong>隐藏信息：</strong>开局有 5 张卡移除。你永远不知道所有卡的去向</li>
+    <li>开局每人只有 10 块钱——钱花光就完了</li>
+  </ul>
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「Oink 的投资博弈游戏。6 家公司，你要抢最大股东——当了最大股东就不能再买那家公司的卡了，特别纠结。最后大股东从小股东那里收钱，小股东全要亏。像迷你版炒股，但一局 20 分钟。」<br><strong>适合：</strong>3-6 人策略聚会，喜欢经济/投资/持股类游戏的玩家。有 bluffing 成分但核心是投资判断。</div>
+</div>
+</div>
+
+<!-- Kobayakawa -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/kobayakawa-cover.png" alt="Kobayakawa" loading="lazy">
+  <div><h3>Kobayakawa · 小早川 <span class="yr">2013</span></h3>
+  <span class="tag">极简扑克</span><span class="tag">赌博</span><span class="tag">Bluffing</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>设计师：</strong>Jun Sasaki | <strong>人数：</strong>3–6 | <strong>时长：</strong>15min | <strong>年龄：</strong>10+</p>
+  <p><strong>核心机制：</strong>这个世界最短的扑克游戏。每人只有<strong>一张牌</strong>，中央有一张面朝上的公共牌（小早川牌）。轮流选择抽牌换牌或换掉公共牌。然后所有人同时决定“跟注 1 块钱”或“弃牌”。亮牌后，<strong>数字最小的玩家可以把公共牌的数字加到自己牌上</strong>——所以拿最小牌的玩家可能直接翻盘。</p>
+  <ul>
+    <li>1-15 号牌，每人发 1 张，全程只知道自己的牌和公共牌</li>
+    <li>公共牌加到最小牌上——这个反转是灵魂</li>
+    <li>跟注只需 1 块钱——赌博感极强但不是大额下注</li>
+    <li>2025 年重制版新增边注机制</li>
+  </ul>
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「世界最短的扑克。每人只有一张牌，一张公共牌。最小牌可以加公共牌的数字直接翻盘。比大小只要 2 秒，但心理博弈可以 2 分钟。Oink 极简设计哲学的巅峰。」<br><strong>适合：</strong>3-6 人快速赌博局、喜欢扑克但嫌流程长的玩家。2025 新版支持更多人和边注。</div>
+</div>
+</div>
+
+<!-- Flotsam Fight -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/flotsamfight-cover.png" alt="Flotsam Fight" loading="lazy">
+  <div><h3>20. Flotsam Fight · 大帆船货运 <span class="yr">2015</span></h3>
+  <span class="tag">手牌管理</span><span class="tag">出清</span><span class="tag">大富豪</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>人数：</strong>3–6 | <strong>时长：</strong>20min | <strong>年龄：</strong>8+</p>
+  <p><strong>核心机制：</strong>变种的大富豪/跑得快。你的手牌是各种货物，公共区是不同载重量的救生艇。每轮必须往救生艇上打货，规则是<strong>数字更大或同数更多</strong>才能压过上一手。先清空手牌者获胜。但上手牌打不好，容易被大牌卡死。</p>
+  <ul>
+    <li>海洋漂流主题——货物、救生艇、漂流瓶的极简视觉</li>
+    <li>核心决策：<strong>把大牌用来抢主动权，还是留着后期救命</strong></li>
+    <li>上手容易，精通需要控制节奏</li>
+  </ul>
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「Oink 版的跑得快/大富豪。把货物打到救生艇上，只能出更大的数字或更多张。节奏感极强——什么时候出大牌、什么时候忍一轮，策略深度很足。海洋主题也好看。」<br><strong>适合：</strong>喜欢传统扑克/跑得快的玩家、想要“像扑克但有主题有新意”的聚会。</div>
+</div>
+</div>
+
+<!-- TROIKA -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/troika-cover.png" alt="TROIKA" loading="lazy">
+  <div><h3>18. TROIKA · 三件套 <span class="yr">2017</span></h3>
+  <span class="tag">成套收集</span><span class="tag">推运气</span><span class="tag">盲抽</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>设计师：</strong>Jun Sasaki | <strong>人数：</strong>2–5 | <strong>时长：</strong>20min | <strong>年龄：</strong>9+</p>
+  <p><strong>核心机制：</strong>太空矿石主题。49 块七边形板块（数字 1-15，每个数字 3 块，唯独 7 有 7 块）。你要凑两种三件套：(1) 燃料套——<strong>3 块同数字</strong>（必须，0 分，但没有它你不能得分）；(2) 宝石套——<strong>3 块连续数字</strong>（得分 = 最高数字的个位数，所以 7-8-9 = 9 分最值钱）。</p>
+  <ul>
+    <li>板块面朝下，每回合翻一块，然后选拿公开的、拿面朝下的、或归还一块</li>
+    <li>先完成燃料套 + 宝石套且无垃圾牌的玩家可以喊 <strong>TROIKA!</strong> 提前退出——+5 分奖励</li>
+    <li>喊错了直接本轮出局</li>
+    <li>7-8-9 是最强宝石套（9 分），但 7 也是燃料套首选（有 7 张）——抢 7 是核心战场</li>
+  </ul>
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「太空矿石主题的成套收集。你要同时凑两套牌——一套燃料让你有资格得分，一套宝石实际得分。最值钱的组合是 7-8-9。先凑齐的人可以喊 TROIKA 提前锁定奖励分——但喊错直接淘汰。」<br><strong>适合：</strong>2-4 人策略局，喜欢推运气 + 成套收集的玩家。七边形板块手感独特。</div>
+</div>
+</div>
+
+<!-- Twins -->
+<div class="game-section">
+<div class="game-hd">
+  <img src="../images/twins-cover.png" alt="Twins" loading="lazy">
+  <div><h3>22. Twins · 双子 <span class="yr">2014</span></h3>
+  <span class="tag">赌博</span><span class="tag">手牌匹配</span><span class="tag">RK 设计</span><span class="tag">已绝版</span></div>
+</div>
+<div class="game-bd">
+  <p><strong>设计师：</strong>Reiner Knizia（桌游界传奇大师）| <strong>人数：</strong>3–5 | <strong>时长：</strong>20min | <span style="color:#c0392b;">已绝版</span></p>
+  <p><strong>核心机制：</strong>著名的德式桌游大师 Reiner Knizia（RK 博士）为 Oink 设计的唯一一款游戏。玩家通过有限的竞标和手牌管理，匹配场上一对一对的分数卡。核心是精准的数字赌博——你知道场上有什么，但不知道对手手里有什么。</p>
+  <div class="pitch-box"><strong>💬 推荐话术：</strong>「桌游传奇大师 Reiner Knizia 给 Oink 做的唯一一款游戏，已绝版。极简的竞标 + 匹配机制，典型 Knizia 风格——规则一张纸，深度一口井。收藏价值极高。」<br><strong>适合：</strong>Oink 收藏家、Knizia 粉丝。店内通常无货。</div>
+</div>
+</div>
+
+<h2>六款卡牌策略对比</h2>
+
+<table>
+  <tr><th></th><th>SCOUT</th><th>Startups</th><th>Kobayakawa</th><th>Flotsam Fight</th><th>TROIKA</th><th>Twins</th></tr>
+  <tr><td><strong>核心</strong></td><td>不能重排手牌</td><td>持股+收钱</td><td>单牌+公共牌</td><td>跑得快变体</td><td>双套装收集</td><td>竞标+匹配</td></tr>
+  <tr><td><strong>复杂度</strong></td><td>★★★</td><td>★★★</td><td>★</td><td>★★</td><td>★★★</td><td>★★</td></tr>
+  <tr><td><strong>最佳人数</strong></td><td>3-5</td><td>4-6</td><td>4-6</td><td>4-5</td><td>3-4</td><td>3-5</td></tr>
+  <tr><td><strong>随机性</strong></td><td>中（发牌）</td><td>中（5 张移除）</td><td>低</td><td>中</td><td>中（盲抽）</td><td>低</td></tr>
+  <tr><td><strong>可购性</strong></td><td>是</td><td>是</td><td>是</td><td>是</td><td>是</td><td>绝版</td></tr>
+</table>
+
+<div class="quiz">
+  <h3>场景判断</h3>
+  <div class="question" id="q1">场景 1：客人说“我想要规则短但有深度的卡牌游戏，像 SCOUT 那种级别的——但 SCOUT 我已经有了”。</div>
+  <div class="options" data-q="q1">
+    <div class="option" data-a="a">Kobayakawa</div>
+    <div class="option" data-a="b">Startups</div>
+    <div class="option" data-a="c">Flotsam Fight</div>
+  </div>
+  <div class="feedback" id="fb-q1"></div>
+
+  <div class="question" id="q2">场景 2：三对情侣聚会，想要能 6 个人一起玩的卡牌游戏，不要太复杂。</div>
+  <div class="options" data-q="q2">
+    <div class="option" data-a="a">TROIKA</div>
+    <div class="option" data-a="b">SCOUT</div>
+    <div class="option" data-a="c">Startups</div>
+  </div>
+  <div class="feedback" id="fb-q2"></div>
+
+  <div class="question" id="q3">场景 3：客人说“我们几个朋友喜欢打扑克——德州、大老二什么的。有桌游版本的吗？”</div>
+  <div class="options" data-q="q3">
+    <div class="option" data-a="a">TROIKA</div>
+    <div class="option" data-a="b">Startups</div>
+    <div class="option" data-a="c">Kobayakawa + Flotsam Fight</div>
+  </div>
+  <div class="feedback" id="fb-q3"></div>
+  <button id="check-btn">检查答案</button>
+</div>
+
+<div class="followup">
+  <p><a href="07-pushluck-adventure.html">→ 下一课：推运气与冒险类</a></p>
+</div>
+
+<div class="lesson-nav">
+  <span><a href="05-speed-party.html">← 第五课：速度与反应类</a></span>
+  <span><a href="07-pushluck-adventure.html">第七课：推运气与冒险类 →</a></span>
+</div>
+
+<script>
+document.querySelectorAll('.quiz .option').forEach(function(o){ o.addEventListener('click',function(){var q=this.parentElement;q.querySelectorAll('.option').forEach(function(s){s.classList.remove('selected');});this.classList.add('selected');});});
+document.getElementById('check-btn').addEventListener('click',function(){
+var a={q1:{correct:'b',explanation:'✅ Startups 的深度和 SCOUT 同级别（都是 Oink 策略向最强作品之一），但机制完全不同——持股投资 vs 手牌限制，不会感觉重复。'},q2:{correct:'c',explanation:'✅ Startups 支持 3-7 人，6 人刚好。规则适中（不是最简但也不是最复杂），投资主题男女皆宜。SCOUT 上限 5 人。'},q3:{correct:'c',explanation:'✅ Kobayakawa 是极简德州（单牌+跟注+bluff），Flotsam Fight 是大老二变体（出牌+压制+清空）。两个打包推荐刚好覆盖他们的需求。'}};
+Object.keys(a).forEach(function(qid){var fb=document.getElementById('fb-'+qid),opts=document.querySelectorAll('[data-q="'+qid+'"] .option'),c=a[qid].correct;opts.forEach(function(o){o.style.pointerEvents='none';if(o.getAttribute('data-a')===c)o.classList.add('correct');});var sel=document.querySelector('[data-q="'+qid+'"] .option.selected');if(sel&&sel.getAttribute('data-a')===c){fb.innerHTML=a[qid].explanation;fb.style.color='#2d7d46';}else if(sel){fb.innerHTML='❌ 不太对。'+a[qid].explanation;fb.style.color='#c0392b';}else{fb.innerHTML='请先选择。'+a[qid].explanation;fb.style.color='#666';}});
+});
+</script>
+</body>
+</html>

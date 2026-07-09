@@ -3,356 +3,414 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oink Games 2020-2026 店员推荐速查表</title>
+<title>Oink Games 完整速查表 · 2011–2026</title>
 <link rel="stylesheet" href="../assets/style.css">
 <style>
-  .oink-header { text-align: center; margin-bottom: 2rem; }
+  .oink-header { text-align: center; margin-bottom: 1.5rem; }
   .oink-header p { color: var(--muted); max-width: 500px; margin: 0 auto; }
-
-  /* Quick stats bar */
-  .quick-bar {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
-    margin: 1.5rem 0;
-  }
-  .quick-stat {
-    text-align: center; padding: 0.8rem 0.5rem;
-    background: var(--callout-bg); border-radius: 6px;
-  }
-  .quick-stat .num { font-size: 1.6rem; font-weight: 700; color: var(--accent); display: block; }
-  .quick-stat .lbl { font-size: 0.75rem; color: var(--muted); }
-
-  /* Game detail cards */
-  .game-detail {
-    border: 1px solid var(--rule); border-radius: 8px;
-    margin: 1.5rem 0; overflow: hidden;
-  }
-  .game-detail .hd {
-    display: flex; justify-content: space-between; align-items: baseline;
-    padding: 0.8rem 1rem; background: var(--callout-bg);
-    border-bottom: 1px solid var(--rule);
-  }
-  .game-detail .hd h3 { margin: 0; font-size: 1.1rem; border: none; padding: 0; }
-  .game-detail .hd .year { font-size: 0.8rem; color: var(--muted); }
-  .game-detail .bd { padding: 1rem; }
-  .game-detail .bd .row { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-  .game-detail .bd .col { flex: 1; min-width: 200px; }
-  .game-detail .bd .col h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 0.3rem; }
-  .game-detail .bd .col p { font-size: 0.9rem; margin: 0 0 0.5rem; }
-  .game-detail .bd .pitch {
-    background: #fdf8f0; border-left: 3px solid var(--accent);
-    padding: 0.6rem 0.8rem; margin-top: 0.8rem; font-size: 0.9rem;
-  }
-
-  /* Scenario mapping */
-  .scenario-map { margin: 2rem 0; }
-  .scenario-map table { font-size: 0.85rem; }
-  .scenario-map td:first-child { white-space: nowrap; font-weight: 600; }
-  .rec { display: inline-block; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.8rem; }
+  .quick-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem; margin: 1.5rem 0; }
+  .quick-stat { text-align: center; padding: 0.6rem 0.4rem; background: var(--callout-bg); border-radius: 6px; }
+  .quick-stat .num { font-size: 1.4rem; font-weight: 700; color: var(--accent); display: block; }
+  .quick-stat .lbl { font-size: 0.7rem; color: var(--muted); }
+  .game-detail { border: 1px solid var(--rule); border-radius: 8px; margin: 1rem 0; overflow: hidden; }
+  .game-detail .hd { display: flex; align-items: center; gap: 1rem; padding: 0.7rem 1rem; background: var(--callout-bg); border-bottom: 1px solid var(--rule); }
+  .game-detail .hd img { width: 60px; height: auto; border-radius: 3px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .game-detail .hd h3 { margin: 0; font-size: 1rem; border: none; padding: 0; }
+  .game-detail .hd .yr { font-size: 0.75rem; color: var(--muted); }
+  .game-detail .bd { padding: 0.7rem 1rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .game-detail .bd .col { flex: 1; min-width: 180px; }
+  .game-detail .bd .col h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 0.2rem; }
+  .game-detail .bd .col p { font-size: 0.85rem; margin: 0 0 0.3rem; }
+  .pitch { background: #fdf8f0; padding: 0.5rem 0.7rem; font-size: 0.85rem; margin-top: 0.5rem; }
+  .section-title { margin: 2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--accent); }
+  .rec { display: inline-block; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.75rem; }
   .rec-best { background: #e8f5e9; color: #2d7d46; }
   .rec-good { background: #fff3e0; color: #e65100; }
-  .rec-ok   { background: #f5f5f5; color: #888; }
-
-  /* Print styles */
-  @media print {
-    body { max-width: 100%; font-size: 12px; }
-    .game-detail { break-inside: avoid; }
-    .quick-bar { break-inside: avoid; }
-  }
+  @media print { body { max-width: 100%; font-size: 11px; } .game-detail { break-inside: avoid; } }
+  .rare { color: #c0392b; font-size: 0.75rem; }
 </style>
 </head>
 <body>
 
 <div class="oink-header">
-  <h1>Oink Games 2020–2026</h1>
-  <p>日本小橙盒出版社十年精品目录 · 店员推荐速查表 · 共 10 款</p>
+  <h1>Oink Games 完整速查表</h1>
+  <p>日本小橙盒出版社 · 2011–2026 · 共 31 款 · 店员推荐工具</p>
 </div>
 
 <div class="quick-bar">
-  <div class="quick-stat"><span class="num">10</span><span class="lbl">收录游戏</span></div>
-  <div class="quick-stat"><span class="num">2020–26</span><span class="lbl">发行跨度</span></div>
-  <div class="quick-stat"><span class="num">4 款</span><span class="lbl">合作类</span></div>
-  <div class="quick-stat"><span class="num">2–10</span><span class="lbl">支持人数范围</span></div>
+  <div class="quick-stat"><span class="num">31</span><span class="lbl">收录游戏</span></div>
+  <div class="quick-stat"><span class="num">7</span><span class="lbl">课程数</span></div>
+  <div class="quick-stat"><span class="num">16</span><span class="lbl">年跨度</span></div>
+  <div class="quick-stat"><span class="num">7</span><span class="lbl">绝版/稀有</span></div>
+  <div class="quick-stat"><span class="num">2–10</span><span class="lbl">人数范围</span></div>
 </div>
 
-<h2>按类型速查</h2>
+<!-- ===== SECTION 1: 合作 ===== -->
+<h2 class="section-title">🤝 合作类（第一课）</h2>
 
-<div class="scenario-map">
+<div class="game-detail">
+  <div class="hd"><img src="../images/moonadventure-cover.png" alt="Moon Adventure"><h3>Moon Adventure 月球探险 <span class="yr">2021</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–5 · ⏱ 40min · 🎂 10+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">合作</span><span class="tag">资源管理</span><span class="tag">骰子</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">策略合作</span></p></div>
+    <div class="pitch">💬「共享氧气去月球回收物资，每人背包只能装 5 样东西。一个人死全队输。比海底探险更重合作。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/heyyo-cover.png" alt="HEY YO"><h3>HEY YO 嘿哟 <span class="yr">2020</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–10 · ⏱ 15min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">合作</span><span class="tag">节奏</span><span class="tag">即时</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">派对气氛</span></p></div>
+    <div class="pitch">💬「自带节拍器，跟着咚哒出牌连词。桌游中唯一的节奏合作游戏。全场一起喊 Hey Yo!」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/orderoverload-cover.png" alt="Order Overload Cafe"><h3>Order Overload: Cafe 咖啡馆订单过载 <span class="yr">2022</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–6 · ⏱ 20min · 🎂 6+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">合作</span><span class="tag">记忆力</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">家庭亲子</span></p></div>
+    <div class="pitch">💬「读完订单洗混分掉，轮流猜别人手里有什么。忘了就淘汰，集体失忆爆笑。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/frozenpassage-cover.png" alt="The Frozen Passage"><h3>The Frozen Passage 冰封航道 <span class="yr">2026</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 1–4 · ⏱ 20min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">合作</span><span class="tag">限沟通</span><span class="tag">卡牌</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">尝鲜/默契</span><span class="rare">新品</span></p></div>
+    <div class="pitch">💬「2026 年最新作。不能直接说牌，只能靠默契铺倒金字塔。极光镭射卡牌颜值巅峰。」</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 2: 反应拼图 ===== -->
+<h2 class="section-title">⚡ 反应拼图类（第二课）</h2>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/meowtiles-cover.png" alt="Meow Tiles"><h3>Meow Tiles 喵砖 <span class="yr">2024</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–4 · ⏱ 15min · 🎂 6+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">即时</span><span class="tag">图案匹配</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">猫奴/亲子</span></p></div>
+    <div class="pitch">💬「9 块猫板，翻题目卡同时抢拼。规则 30 秒，6 岁到 80 岁都能玩。猫奴必入。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/town66-cover.png" alt="Town 66"><h3>Town 66 小镇66 <span class="yr">2022</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 1–4 · ⏱ 15min · 🎂 9+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">板块放置</span><span class="tag">逻辑</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">数独迷</span></p></div>
+    <div class="pitch">💬「同行同列不能重复颜色或形状。能看到别人牌背颜色但看不到形状，数独式烧脑。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/compress-cover.png" alt="Compress"><h3>Compress 压缩 <span class="yr">2025</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 1–7 · ⏱ 20min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">创意编码</span><span class="tag">记忆力</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">脑洞型</span><span class="rare">新品</span></p></div>
+    <div class="pitch">💬「0/1 序列不断变长，你用 8 张卡发明自己的暗号来记录。不是记忆游戏，是创造力游戏。」</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 3: 策略博弈 ===== -->
+<h2 class="section-title">🧠 策略博弈类（第三课）</h2>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/fafnir-cover.png" alt="Fafnir"><h3>Fafnir 法夫纳 <span class="yr">2020</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–4 · ⏱ 20min · 🎂 9+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">隐秘竞标</span><span class="tag">市场操控</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">拍卖/经济</span></p></div>
+    <div class="pitch">💬「暗手出价竞标宝石，你丢掉的宝石改变市场供需。金色永远 +1，其余看排名。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/trnd-cover.png" alt="TRND"><h3>TRND 趋势 <span class="yr">2024</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–5 · ⏱ 30min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">手牌管理</span><span class="tag">时机判断</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">SCOUT 爱好者</span></p></div>
+    <div class="pitch">💬「复古椅子凑同款出清。平方计分（4 张 = 16 分），最后一个没出清的 0 分。时机博弈。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/fairtradesouvenirs-cover.png" alt="Fairtrade Souvenirs"><h3>Fairtrade Souvenirs 公平贸易纪念品 <span class="yr">2025</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–5 · ⏱ 30min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">掷骰</span><span class="tag">成套收集</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">旅行/亲子</span><span class="rare">环保</span></p></div>
+    <div class="pitch">💬「镰仓骑行收集纪念品，公平贸易标章版多花钱但多加分。火车开前回到车站否则零分。」</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 4: 推理社交 ===== -->
+<h2 class="section-title">🔍 推理社交类（第四课）</h2>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/insiderblack-cover.png" alt="iNSIDER BLACK"><h3>iNSIDER BLACK 内幕黑 <span class="yr">2019</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 4–8 · ⏱ 15min · 🎂 9+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">身份猜测</span><span class="tag">海龟汤</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">谁是卧底粉</span></p></div>
+    <div class="pitch">💬「5 分钟猜词 + 投票抓内鬼。内幕者知道答案但要暗中引导且不被发现。黑色版角色更多。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/fakeartist-cover.png" alt="A Fake Artist"><h3>A Fake Artist Goes to New York 假艺术家去纽约 <span class="yr">2012</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 5–10 · ⏱ 20min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">社交推理</span><span class="tag">画画</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">聚会/破冰</span></p></div>
+    <div class="pitch">💬「每人画一笔合作作画，但有人不知道画什么。画太明显反而输。5-10 人都好玩。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/inagrove-cover.png" alt="In a Grove"><h3>In a Grove 藪の中 <span class="yr">2013</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–5 · ⏱ 20min · 🎂 9+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">推理</span><span class="tag">Bluffing</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">心理博弈</span></p></div>
+    <div class="pitch">💬「罗生门桌游版。传牌排除 + 5 号反转 + bluff 指认。2-4 人心理层次最深。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/diamondswap-cover.png" alt="The Diamond Swap"><h3>The Diamond Swap 钻石大盗 <span class="yr">2019</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 4–8 · ⏱ 15min · 🎂 9+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">阵营</span><span class="tag">闭眼</span><span class="tag">观察</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">狼人杀粉</span></p></div>
+    <div class="pitch">💬「闭眼传递钻石，睁眼抓小偷。阵营对抗 + 闭眼机制，比狼人杀快 5 倍。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/tricksphantom-cover.png" alt="Tricks and the Phantom"><h3>Tricks and the Phantom 诡计与幻影 <span class="yr">2011</span><span class="rare">绝版</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–4 · ⏱ 20min · 🎂 10+ <span class="rare">已绝版</span></p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">伪装</span><span class="tag">推理</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">收藏家</span></p></div>
+    <div class="pitch">💬「Oink 最早推理作。暗扣打牌 + 宣称身份 + 微缩线索。类似极简版 Coup。已绝版。」</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 5: 速度反应 ===== -->
+<h2 class="section-title">🏃 速度反应类（第五课）</h2>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/quickitypickity-cover.png" alt="Quickity Pickity"><h3>Quickity Pickity 快手摘果 <span class="yr">2019</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–5 · ⏱ 20min · 🎂 6+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">即时</span><span class="tag">图案匹配</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">暖场/亲子</span></p></div>
+    <div class="pitch">💬「同时翻板块抢水果，按表情+颜色凑套装。每轮计分规则不同，三只猴子结束。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/tomatomato-cover.png" alt="tomatomato"><h3>tomatomato 番茄番茄 <span class="yr">2018</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–8 · ⏱ 15min · 🎂 6+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">绕口令</span><span class="tag">反应</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">派对/喝酒</span></p></div>
+    <div class="pitch">💬「轮流翻牌念词，后面的人要把所有词连起来念。舌头打结到全场笑崩。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/mrface-cover.png" alt="Mr. Face"><h3>Mr. Face 脸谱先生 <span class="yr">2018</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–8 · ⏱ 15min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">表情</span><span class="tag">台词匹配</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">创意/Dixit 粉</span></p></div>
+    <div class="pitch">💬「拼五官做表情，别人从手牌中选最配的台词。像表情包版 Dixit。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/makethedifference-cover.png" alt="Make the Difference"><h3>Make the Difference 找茬大师 <span class="yr">2019</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–6 · ⏱ 20min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">创作</span><span class="tag">观察</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">创作型</span></p></div>
+    <div class="pitch">💬「在精美元插画上加几笔制造不同点，让别人找。藏得好但又要能被找到。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/ninetiles-cover.png" alt="NINE TILES"><h3>NINE TILES 九砖 <span class="yr">2015</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–4 · ⏱ 15min · 🎂 6+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">即时</span><span class="tag">图案匹配</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">入门口粮</span></p></div>
+    <div class="pitch">💬「Oink 销量冠军系列原版。9 块双面砖同时竞速拼 3×3。已出多种联名（宝可梦、猫等）。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/ninetilesextreme-cover.png" alt="NINE TILES EXTREME"><h3>NINE TILES EXTREME 九砖极限版 <span class="yr">2018</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–4 · ⏱ 15min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">即时</span><span class="tag">干扰规则</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-good">原版进阶</span></p></div>
+    <div class="pitch">💬「九砖的脑残升级版。题目卡会切换匹配规则（颜色→形状），大脑反复短路。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/ninjacatfoot-cover.png" alt="Ninja Catfoot"><h3>Ninja Catfoot 忍者猫足 <span class="yr">2011</span><span class="rare">绝版圣杯</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–6 · ⏱ 15min · 🎂 8+ <span class="rare">终极绝版</span></p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">动作</span><span class="tag">潜行</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">收藏家</span></p></div>
+    <div class="pitch">💬「Oink 终极圣杯。忍者猫动作潜行游戏，2011 年最早作品之一。见即秒。」</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 6: 卡牌策略 ===== -->
+<h2 class="section-title">🃏 卡牌策略类（第六课）</h2>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/scout-cover.png" alt="SCOUT"><h3>SCOUT <span class="yr">2019</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–5 · ⏱ 20min · 🎂 9+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">手牌管理</span><span class="tag">Spiel des Jahres</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">卡牌玩家首选</span></p></div>
+    <div class="pitch">💬「不能重新排列手牌。每张卡两端都有数字，打出相邻牌或偷牌调整。Oink 评分最高。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/startups-cover.png" alt="Startups"><h3>Startups 初创公司 <span class="yr">2016</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–7 · ⏱ 20min · 🎂 10+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">投资</span><span class="tag">Bluffing</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">经济/投资</span></p></div>
+    <div class="pitch">💬「6 家公司抢大股东。当了最大股东就不能再买，最后从小股东收钱。迷你版炒股。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/kobayakawa-cover.png" alt="Kobayakawa"><h3>Kobayakawa 小早川 <span class="yr">2013</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–6 · ⏱ 15min · 🎂 10+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">极简扑克</span><span class="tag">Bluffing</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">扑克爱好者</span></p></div>
+    <div class="pitch">💬「世界最短扑克。每人一张牌，公共牌加到最小牌上直接翻盘。2025 新重制版。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/flotsamfight-cover.png" alt="Flotsam Fight"><h3>Flotsam Fight 大帆船货运 <span class="yr">2015</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–6 · ⏱ 20min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">手牌管理</span><span class="tag">出清</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">跑得快粉</span></p></div>
+    <div class="pitch">💬「Oink 版大富豪。把货物打到救生艇上，数字更大或同数更多压过。节奏感极强。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/troika-cover.png" alt="TROIKA"><h3>TROIKA 三件套 <span class="yr">2017</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–5 · ⏱ 20min · 🎂 9+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">成套收集</span><span class="tag">推运气</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">策略收集</span></p></div>
+    <div class="pitch">💬「太空矿石双套装。燃料套(0分)+宝石套(7-8-9=9分最强)。先凑齐喊 TROIKA 锁定 +5。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/twins-cover.png" alt="Twins"><h3>Twins 双子 <span class="yr">2014</span><span class="rare">绝版</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–5 · ⏱ 20min · 🎂 9+ <span class="rare">已绝版</span></p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">竞标</span><span class="tag">匹配</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">收藏/Knizia粉</span></p></div>
+    <div class="pitch">💬「桌游传奇 Reiner Knizia 给 Oink 的唯一作品。极简竞标+匹配。已绝版。」</div>
+  </div>
+</div>
+
+<!-- ===== SECTION 7: 推运气冒险 ===== -->
+<h2 class="section-title">🎲 推运气冒险类（第七课）</h2>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/deepsea-cover.png" alt="Deep Sea Adventure"><h3>Deep Sea Adventure 海底探险 <span class="yr">2014</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–6 · ⏱ 30min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">推运气</span><span class="tag">共享资源</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">所有人</span></p></div>
+    <div class="pitch">💬「Oink 销量冠军（20 万+）。共享氧气下海捞宝，捡越多走得越慢。互坑神作，终极入门。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/dungeonmandom-cover.png" alt="Dungeon of Mandom"><h3>Dungeon of Mandom 地牢求生 <span class="yr">2013</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–4 · ⏱ 15min · 🎂 9+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">推运气</span><span class="tag">Bluffing</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-best">吹牛局</span></p></div>
+    <div class="pitch">💬「塞怪物或扒装备，最后不退的人裸奔打怪。Oink 里程碑。英文版 Welcome to the Dungeon。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/dungeonmandomviii-cover.png" alt="Dungeon of Mandom VIII"><h3>Dungeon of Mandom VIII 地牢求生8 <span class="yr">2015</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 2–4 · ⏱ 20min · 🎂 9+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">推运气</span><span class="tag">Bluffing</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-good">原版进阶</span></p></div>
+    <div class="pitch">💬「8 个不同职业（战士/法师/盗贼…），像素风视觉。原版豪华升级，重开性大幅提升。」</div>
+  </div>
+</div>
+
+<div class="game-detail">
+  <div class="hd"><img src="../images/stamps-cover.png" alt="Stamps"><h3>Stamps 邮票 <span class="yr">2017</span></h3></div>
+  <div class="bd">
+    <div class="col"><h4>信息</h4><p>👥 3–5 · ⏱ 20min · 🎂 8+</p></div>
+    <div class="col"><h4>机制</h4><p><span class="tag">竞标</span><span class="tag">成套收集</span></p></div>
+    <div class="col"><h4>适合</h4><p><span class="rec rec-good">邮票/收集</span></p></div>
+    <div class="pitch">💬「邮票收集竞标游戏。Oink 隐藏宝藏，主题精美。收藏/竞标爱好者首选。」</div>
+  </div>
+</div>
+
+<!-- ===== SCENARIO MATRIX ===== -->
+<h2 class="section-title">客人说……推荐哪款？</h2>
+
 <table>
-  <tr><th style="width:12%">类型</th><th style="width:22%">游戏</th><th style="width:10%">人数</th><th style="width:10%">时长</th><th>一句话卖点</th><th style="width:22%">最适合的客人</th></tr>
-
-  <tr>
-    <td rowspan="4" style="vertical-align:top"><strong>🤝 合作</strong></td>
-    <td>Moon Adventure<br><small>月球探险 2021</small></td>
-    <td>2–5</td><td>40min</td>
-    <td>共同氧气供应下的月球求生，团队精算合作</td>
-    <td><span class="rec rec-best">喜欢策略合作的硬核玩家</span></td>
-  </tr>
-  <tr>
-    <td>HEY YO<br><small>嘿哟 2020</small></td>
-    <td>2–10</td><td>15min</td>
-    <td>跟着节拍出牌的节奏合作游戏，桌游中的音游</td>
-    <td><span class="rec rec-best">派对气氛组、年轻人局</span></td>
-  </tr>
-  <tr>
-    <td>Order Overload: Cafe<br><small>咖啡馆订单过载 2022</small></td>
-    <td>2–6</td><td>20min</td>
-    <td>记住越来越长的咖啡订单，爆笑记忆合作</td>
-    <td><span class="rec rec-best">家庭亲子、轻松聚会</span></td>
-  </tr>
-  <tr>
-    <td>The Frozen Passage<br><small>冰封航道 2026</small></td>
-    <td>1–4</td><td>20min</td>
-    <td>限沟通合作 + 倒金字塔卡牌铺设，最新话题作</td>
-    <td><span class="rec rec-best">喜欢新鲜感的桌游爱好者</span></td>
-  </tr>
-
-  <tr style="background:var(--callout-bg)">
-    <td rowspan="3" style="vertical-align:top"><strong>⚡ 反应/拼图</strong></td>
-    <td>Meow Tiles<br><small>喵砖 2024</small></td>
-    <td>2–4</td><td>15min</td>
-    <td>猫咪版九砖！翻卡、翻转、拼出指定猫阵</td>
-    <td><span class="rec rec-best">猫奴、喜欢快手游戏的玩家</span></td>
-  </tr>
-  <tr style="background:var(--callout-bg)">
-    <td>Town 66<br><small>小镇66 2022</small></td>
-    <td>1–4</td><td>15min</td>
-    <td>数独式房屋放置，同行同列不重复，极简烧脑</td>
-    <td><span class="rec rec-best">喜欢拼图/数独的逻辑型玩家</span></td>
-  </tr>
-  <tr style="background:var(--callout-bg)">
-    <td>Compress<br><small>压缩 2025</small></td>
-    <td>1–7</td><td>20min</td>
-    <td>自己发明暗号记录 0/1 序列，超创意记忆力</td>
-    <td><span class="rec rec-best">喜欢脑洞大开的创意型玩家</span></td>
-  </tr>
-
-  <tr>
-    <td rowspan="3" style="vertical-align:top"><strong>🧠 策略/博弈</strong></td>
-    <td>Fafnir<br><small>法夫纳 2020</small></td>
-    <td>2–4</td><td>20min</td>
-    <td>丢弃金蛋竞标宝石，市场供需决定宝石价值</td>
-    <td><span class="rec rec-best">喜欢拍卖/经济博弈的玩家</span></td>
-  </tr>
-  <tr>
-    <td>TRND<br><small>趋势 2024</small></td>
-    <td>3–5</td><td>30min</td>
-    <td>椅子卡牌凑同形同色，时机判断心理博弈</td>
-    <td><span class="rec rec-best">喜欢轻策 + 互动的中度玩家</span></td>
-  </tr>
-  <tr>
-    <td>Fairtrade Souvenirs<br><small>公平贸易纪念品 2025</small></td>
-    <td>2–5</td><td>30min</td>
-    <td>镰仓骑行收集纪念品，高风险高回报的骰子收集</td>
-    <td><span class="rec rec-best">喜欢旅行主题、亲子家庭的玩家</span></td>
-  </tr>
-</table>
-</div>
-
-<h2>各游戏详细规则</h2>
-
-<!-- 1. The Frozen Passage -->
-<div class="game-detail">
-  <div class="hd"><h3>1. The Frozen Passage · 冰封航道</h3><span class="year">2026年5月</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 1–4人 · ⏱ 20min · 🎂 8+ · ¥2,700</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">合作</span><span class="tag">限沟通</span><span class="tag">卡牌铺设</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Emi Kuji</p></div>
-    </div>
-    <p><strong>核心规则：</strong>玩家各自持有手牌（数字 1-9 × 3 色），不能直接告诉他人自己的牌，通过有限沟通协作将所有人的牌铺设成倒金字塔形，从底部宽到顶部窄。每张牌必须满足与下方牌的排列约束条件。使用 6 种特殊道具（无线电、狗拉雪橇、因纽特智慧等）可突破限制。任何一张牌放错——全队立即失败。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「Oink 2026 年刚出的最新作，刚在东京 Game Market 首发。合作铺牌，但不能直接说手里有什么牌，像默契考验。冰川主题的卡牌有极光镭射质感，颜值超高。」<br><strong>推荐场景：</strong>2-4 人的安静合作局，适合喜欢限沟通合作（如《花火》）的玩家。</div>
-  </div>
-</div>
-
-<!-- 2. Compress -->
-<div class="game-detail">
-  <div class="hd"><h3>2. Compress · 压缩</h3><span class="year">2025年</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 1–7人 · ⏱ 20min · 🎂 8+</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">记忆力</span><span class="tag">创意编码</span><span class="tag">手牌管理</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Jun Sasaki</p></div>
-    </div>
-    <p><strong>核心规则：</strong>游戏不断揭示一个由 0 和 1 组成的序列（如 0,1,1,0,0,1…），玩家只能用手中的 8 张笔记卡来“记录”这个序列——旋转、堆叠、遮挡、角落数字，任何方法都行，没有固定规则。每次揭示新数字，更新你的记录方式。任何人可以在任意时刻宣布背诵完整序列，正确则得分，错误则扣分。不是记忆游戏，是“你如何发明自己的压缩算法”的游戏。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「这不是考记忆力，是考创造力——你只有 8 张卡，要追记不断变长的 0/1 序列，怎么用旋转、遮挡、叠放来编码信息全是你自己想出来的。每个人的方法都不一样，玩完互相看对方的记录方式最有意思。」<br><strong>推荐场景：</strong>3-5 人的创意型聚会，适合喜欢“脑洞大开”和差异化思维的玩家。也支持单人挑战。</div>
-  </div>
-</div>
-
-<!-- 3. Fairtrade Souvenirs -->
-<div class="game-detail">
-  <div class="hd"><h3>3. Fairtrade Souvenirs · 公平贸易纪念品</h3><span class="year">2025年</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 2–5人 · ⏱ 30min · 🎂 8+</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">掷骰移动</span><span class="tag">成套收集</span><span class="tag">风险回报</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Jun Sasaki, Goro Sasaki</p></div>
-    </div>
-    <p><strong>核心规则：</strong>改编自 2024 年《威尼斯纪念品》。玩家在镰仓市内骑自行车，掷骰决定步数，在板块上收集 6 种纪念品（糖果、巧克力、咖啡、蜂蜜、肥皂、红酒），凑齐 3 件同种即为一套。关键机制：每种纪念品有 2 块带有公平贸易标章的特殊板块，买价翻倍（2 金币 vs 1），但成套计分时有额外加分。必须赶在火车出发（所有板块翻完）前回到车站，否则直接出局。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「在镰仓骑自行车买纪念品。掷骰子决定走几步，收集 3 个同款凑一套。玩法简单，但有个很妙的公平贸易机制——你可以花双倍价格买带公平贸易标章的商品，风险高但回报也高。必须算好时间回到车站，不然火车就开走了。」<br><strong>推荐场景：</strong>家庭亲子、女性玩家、旅行/日本文化爱好者。轻度策略，友好不互坑。</div>
-  </div>
-</div>
-
-<!-- 4. Meow Tiles -->
-<div class="game-detail">
-  <div class="hd"><h3>4. Meow Tiles · 喵砖 / 猫咪九砖</h3><span class="year">2024年</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 2–4人 · ⏱ 15min · 🎂 6+</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">即时制</span><span class="tag">图案匹配</span><span class="tag">板块翻转</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Jean-Claude Pellin</p></div>
-    </div>
-    <p><strong>核心规则：</strong>九砖家族的猫咪版！每位玩家有一套 9 块双面猫咪板块（正面和反面是不同的猫），在面前排成 3×3。每轮翻一张题目卡，展示目标 3×3 猫阵。所有人同时竞速，旋转、翻转、拖拽自己的 9 块板来匹配目标。最先完成的人拍走题目卡得 1 分。谁先到 4 分获胜。拍错卡会吃惩罚（两次出局）。板块是猫咪形状的，手感软萌。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「Oink 九砖系列的猫咪版，每块板正反面是不同的猫，题目卡翻出来所有人同时抢拼，像猫版华容道。规则 30 秒讲完，三岁小孩到八十岁奶奶都能玩。猫奴必入。」<br><strong>推荐场景：</strong>暖场、亲子、猫奴、非桌游玩家的入门首选。两盒可支持 8 人对战。</div>
-  </div>
-</div>
-
-<!-- 5. TRND -->
-<div class="game-detail">
-  <div class="hd"><h3>5. TRND · 趋势</h3><span class="year">2024年</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 3–5人 · ⏱ 30min · 🎂 8+</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">手牌管理</span><span class="tag">成套收集</span><span class="tag">心理博弈</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Jun Sasaki</p></div>
-    </div>
-    <p><strong>核心规则：</strong>90 张椅子卡——3 种形状 × 3 种颜色 = 9 种类型，各 10 张。目标是将手中所有卡变成同形同色的完全匹配组，然后“出清”得分。每回合可选择：(1) 从牌堆抽一张未知牌，或 (2) 从市场上的 8 张明牌中拿一张，并弃掉与弃牌堆顶颜色或形状匹配的任意数量的牌。当你手中全为完全相同的牌时，可宣布出清。得分 = 手中牌数的平方（3 张 = 9 分，4 张 = 16 分，5 张 = 25 分，6 张 = 36 分）。最关键的是：最后一个留在手中的人该轮得 0 分。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「很优雅的成套收集游戏，全是复古椅子图案。你要把手牌全凑成同款，什么时候出手是关键——攒得越多分越高（平方计分），但万一别人先出清了你就零分。跟 SCOUT 有点像但更讲究时机判断。」<br><strong>推荐场景：</strong>3-4 人的轻松策略局，喜欢 SCOUT / 牛头王类型的玩家。</div>
-  </div>
-</div>
-
-<!-- 6. Order Overload: Cafe -->
-<div class="game-detail">
-  <div class="hd"><h3>6. Order Overload: Cafe · 咖啡馆订单过载</h3><span class="year">2022年</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 2–6人 · ⏱ 20min · 🎂 6+</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">合作</span><span class="tag">记忆力</span><span class="tag">逐步升级</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Jun Sasaki</p></div>
-    </div>
-    <p><strong>核心规则：</strong>开始前翻开一定数量的订单卡，所有人一起大声读一遍并记住。然后洗混，面朝下分给每个玩家（没人知道自己拿的是什么）。轮流猜测别人手里有什么订单。猜对——翻开，推进进度。猜错——猜的人直接淘汰。需要团队合作达到目标数量才能过关。随着等级提升，需要记忆的订单越来越多（越来越难）。核心乐趣在于“明明刚才读过但我怎么忘了？！”的集体爆笑时刻。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「咖啡馆合作记忆游戏。先一起看一堆订单——热美式、少冰拿铁、热茶——然后洗混分给大家。你要猜别人手里拿着什么，猜错直接淘汰。玩起来超级好笑，因为你明明记得有热美式但就是找不到在谁那。越往后订单越多越难。」<br><strong>推荐场景：</strong>家庭聚会、破冰暖场、情侣轻松局。6 岁就能玩。</div>
-  </div>
-</div>
-
-<!-- 7. Town 66 -->
-<div class="game-detail">
-  <div class="hd"><h3>7. Town 66 · 小镇66</h3><span class="year">2022年</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 1–4人 · ⏱ 15min · 🎂 9+</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">板块放置</span><span class="tag">逻辑推理</span><span class="tag">淘汰制</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Christoph Cantzler, Anja Wrede</p></div>
-    </div>
-    <p><strong>核心规则：</strong>36 块房屋板块，每块有独特的形状（6 种）× 颜色（6 种）组合，目标是在 6×6 的虚拟网格中放置房屋。规则只有一条：同行同列不能出现相同颜色或相同形状。你在面前的牌架上藏 4 块对手看不到形状（只能看到背面颜色）的板块。每回合放 1 块，抽 1 块。一旦轮到你时手中无可合法放置的板块——直接出局。可以主动弃牌减少手牌数（离胜利更近但风险更大）。手中清空者获胜。也支持单人纯解谜模式。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「Oink 最烧脑的一块。一个 6×6 的镇子，你要放房子，但同行同列不能重色也不能重形——像数独。你只能看到别人牌背面的颜色，看不到形状，所以要推理别人有什么。没位置放你就出局了。」<br><strong>推荐场景：</strong>2-3 人的安静烧脑局，喜欢解谜/数独/逻辑推理的玩家。</div>
-  </div>
-</div>
-
-<!-- 8. Moon Adventure -->
-<div class="game-detail">
-  <div class="hd"><h3>8. Moon Adventure · 月球探险</h3><span class="year">2021年</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 2–5人 · ⏱ 40min · 🎂 10+</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">合作</span><span class="tag">资源管理</span><span class="tag">骰子驱动</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Jun Sasaki</p></div>
-    </div>
-    <p><strong>核心规则：</strong>全员宇航员，因磁暴散落物资在月球表面，必须在氧气耗尽前回收物资并返回基地。每回合消耗氧气卡来投骰子获得行动点数（1 氧 = 2 骰，2 氧 = 3 骰）。AP 可用来移动、铺设路线（2AP，建立快速通道但牺牲该格的物资）、收集物资（3AP）、放置氧气站（3AP，后续停留可补充氧气）、丢弃物资（1AP）。关键：每人只能携带 5 件物品（氧气卡+物资合计），必须精算。氧气牌堆中混有磁暴卡——抽到会炸毁氧气站。任何一人氧气耗尽——全队失败。返回基地后不可再行动。结束后统计回收物资的总分。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「《海底探险》的设计师做的月球合作版。不像海底那样互相坑，这个是真合作——大家共享氧气，每个人背包只能装 5 样东西，要精算谁去深处拿高分物资、谁留近处铺路。一个人氧气用完全队输，40 分钟刚刚好，通关的成就感特别强。」<br><strong>推荐场景：</strong>2-4 人的策略合作局，喜欢《海底探险》但想要更硬核合作体验的玩家。</div>
-  </div>
-</div>
-
-<!-- 9. HEY YO -->
-<div class="game-detail">
-  <div class="hd"><h3>9. HEY YO · 嘿哟</h3><span class="year">2020年</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 2–10人 · ⏱ 15min · 🎂 8+</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">合作</span><span class="tag">即时制</span><span class="tag">节奏</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Takashi Saito</p></div>
-    </div>
-    <p><strong>核心规则：</strong>盒内自带一个电子节拍器（或使用官方 App 音轨），持续发出“咚、哒”的节拍。玩家每人手牌 4 张，牌面为 "Hey" "Yo" "Ah" "Yeah" 四种词。每次节拍响，当前玩家必须打出一张牌到公共排列区，尝试将相同词的牌连成长链。打出后补牌。当有人打出带黄色星标的关键牌（punchline）时，该链锁定计分：连续相同词的数量 = 得分。错过节拍没出牌 = 队伍吃惩罚。通关目标 50 分。鼓励大声念词甚至跳舞。内含两副牌，支持 4-10 人两队对战。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「桌游里极其少见的节奏游戏。自带节拍器，你得跟着咚哒咚哒的节拍出牌，把相同的词连起来。跟不上节拍就要扣分。玩起来超嗨，大家会忍不住跟着喊 Hey! Yo! Ah! Yeah! 还可以用自己的歌单代替节拍器。」<br><strong>推荐场景：</strong>4 人以上的派对、喝酒局、音乐爱好者。有节奏感的人有优势但不是必须的。</div>
-  </div>
-</div>
-
-<!-- 10. Fafnir -->
-<div class="game-detail">
-  <div class="hd"><h3>10. Fafnir · 法夫纳</h3><span class="year">2020年</span></div>
-  <div class="bd">
-    <div class="row">
-      <div class="col"><h4>基本信息</h4><p>👥 2–4人 · ⏱ 20min · 🎂 9+</p></div>
-      <div class="col"><h4>机制</h4><p><span class="tag">隐秘竞标</span><span class="tag">市场操控</span><span class="tag">盲拍</span></p></div>
-      <div class="col"><h4>设计师</h4><p>Jun Sasaki</p></div>
-    </div>
-    <p><strong>核心规则：</strong>一只叫 Fafnir 的鸡每天下两颗宝石（从袋中随机抽）。所有玩家同时暗手出价——握拳决定丢弃多少颗自己的宝石来竞标。出价最高者赢走当天的两颗宝石，但丢弃的宝石进入弃牌堆。其他人收回出价的宝石。限制：不能丢弃与当天 Fafnir 产出同色的宝石。一轮结束时，统计所有玩家持有的宝石总量：数量第一多的颜色每颗 +3 分，第二多 +2 分，其余颜色每颗 -1 分。金色宝石恒为 +1 分。这意味着——你大量囤积某种颜色反而会让它贬值，而主动丢弃某种颜色可以操控市场。</p>
-    <div class="pitch"><strong>💬 推荐话术：</strong>「Oink 的拍卖神作，但跟普通拍卖完全不一样。你丢弃宝石来竞标——丢掉的进弃牌堆就没了。最后哪种颜色值钱取决于所有人加起来哪种最多，所以你要操控市场供需。很深的心理博弈，但规则 5 分钟讲完。」<br><strong>推荐场景：</strong>3-4 人的心理博弈局，喜欢拍卖/经济/互相猜测的玩家。</div>
-  </div>
-</div>
-
-<h2>场景推荐矩阵</h2>
-
-<table>
-  <tr><th>客人说……</th><th>推荐</th><th>理由</th></tr>
-  <tr>
-    <td>「有没有适合派对玩的？」</td>
-    <td><strong>HEY YO</strong>、Meow Tiles</td>
-    <td>节奏/反应类，规则 1 分钟，越多人越好玩</td>
-  </tr>
-  <tr>
-    <td>「两个人能玩的？」</td>
-    <td><strong>Town 66</strong>、Fafnir、Compress、The Frozen Passage</td>
-    <td>都支持 2 人对局且有深度</td>
-  </tr>
-  <tr>
-    <td>「带小孩的（6-8 岁）」</td>
-    <td><strong>Meow Tiles</strong>、Order Overload: Cafe</td>
-    <td>规则极其简单，猫咪/咖啡馆主题亲和力高</td>
-  </tr>
-  <tr>
-    <td>「不想互打的合作游戏」</td>
-    <td><strong>Moon Adventure</strong>、Order Overload: Cafe</td>
-    <td>两款合作但风格截然不同（策略 vs 记忆）</td>
-  </tr>
-  <tr>
-    <td>「送朋友的礼物」</td>
-    <td><strong>The Frozen Passage</strong>、Fairtrade Souvenirs</td>
-    <td>颜值最高、有故事可讲的 Oink 新品</td>
-  </tr>
-  <tr>
-    <td>「第一次玩桌游」</td>
-    <td><strong>Meow Tiles</strong>、Order Overload: Cafe</td>
-    <td>零门槛，即时上手，高成功率</td>
-  </tr>
-  <tr>
-    <td>「喜欢烧脑的」</td>
-    <td><strong>Town 66</strong>、Fafnir、Compress</td>
-    <td>三款分别考验逻辑推理 / 心理博弈 / 创造力</td>
-  </tr>
-  <tr>
-    <td>「跟 SCOUT 差不多的」</td>
-    <td><strong>TRND</strong></td>
-    <td>同为手牌管理 + 出清机制，但更偏时机博弈</td>
-  </tr>
-  <tr>
-    <td>「最近有什么新品？」</td>
-    <td><strong>The Frozen Passage</strong>、Compress、Fairtrade Souvenirs</td>
-    <td>2025-2026 最新三款</td>
-  </tr>
+  <tr><th>客人说</th><th>首选</th><th>备选</th></tr>
+  <tr><td>「有没有适合派对玩的？」</td><td><strong>HEY YO</strong>、A Fake Artist</td><td>tomatomato</td></tr>
+  <tr><td>「两个人能玩的？」</td><td><strong>Town 66</strong>、Fafnir</td><td>Compress、In a Grove</td></tr>
+  <tr><td>「带小孩的（6-8 岁）」</td><td><strong>Meow Tiles</strong>、Order Overload</td><td>Quickity Pickity</td></tr>
+  <tr><td>「不想互打的合作游戏」</td><td><strong>Deep Sea Adventure</strong></td><td>Moon Adventure、Order Overload</td></tr>
+  <tr><td>「送朋友的礼物」</td><td><strong>The Frozen Passage</strong></td><td>Fairtrade Souvenirs、Compress</td></tr>
+  <tr><td>「第一次玩桌游」</td><td><strong>Deep Sea Adventure</strong>、Meow Tiles</td><td>Kobayakawa</td></tr>
+  <tr><td>「喜欢烧脑的」</td><td><strong>SCOUT</strong>、Town 66</td><td>In a Grove、Fafnir</td></tr>
+  <tr><td>「跟 SCOUT 差不多的」</td><td><strong>TRND</strong></td><td>Startups、Flotsam Fight</td></tr>
+  <tr><td>「跟狼人杀差不多的」</td><td><strong>iNSIDER BLACK</strong></td><td>Diamond Swap、Fake Artist</td></tr>
+  <tr><td>「跟扑克差不多的」</td><td><strong>Kobayakawa</strong></td><td>Flotsam Fight</td></tr>
+  <tr><td>「最近有什么新品？」</td><td><strong>The Frozen Passage</strong></td><td>Compress、Fairtrade Souvenirs</td></tr>
+  <tr><td>「Oink 最有名的」</td><td><strong>Deep Sea Adventure</strong></td><td>SCOUT、A Fake Artist</td></tr>
 </table>
 
 <div class="callout">
-  <strong>Oink 品牌特点（推荐时加分项）：</strong>日本设计、统一小橙盒尺寸（约 11×7×3cm）、价格亲民（¥2,000–3,000 日元）、每盒都是独立完整游戏、极简说明书（通常只有几张纸）、便携性强（口袋/包里随时装两盒）。适合“偶尔玩玩但不想买大盒”的轻度玩家，也是桌游爱好者的收藏级精品。
+  <strong>店员黄金法则：</strong>先问三个问题——几个人？想要什么氛围（热闹/安静/认真）？之前玩过什么喜欢的？三个答案就能把 31 款缩小到 1-2 款。
 </div>
 
-<div class="followup">
-  <p>需要某个游戏的更详细规则解释、推荐策略、或者针对特定客人的推荐方案？随时问你的桌游老师。</p>
-  <p><a href="../lessons/01-cooperative-games.html">→ 下节预告：Oink 合作类游戏深度课</a></p>
-</div>
-
-<div class="lesson-nav">
-  <span><a href="../index.html">📚 资源</a></span>
-  <span><a href="../index.html">🎯 使命</a></span>
+<div class="followup" style="margin-top:2rem;">
+  <p><a href="../index.html">🏠 返回首页</a></p>
 </div>
 
 </body>
