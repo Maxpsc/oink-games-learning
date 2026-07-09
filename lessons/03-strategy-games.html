@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三课：Oink 策略博弈三部曲</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .pitch-box { border-left: 3px solid var(--accent); padding: 0.6rem 0.8rem; margin: 0.8rem 0; font-size: 0.9rem; background: #fdf8f0; }
+  .score-table { margin: 0.8rem 0; }
+  .score-table td:first-child { font-weight: 600; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<div class="lesson-meta">
+  第三课 · <a href="02-speed-puzzle-games.html">← 上一课</a> · <a href="../index.html">使命</a> · <a href="../reference/quick-reference.html">速查表</a>
+</div>
+
+<h1>Oink 策略博弈三部曲——竞标、趋势与收集的心理战</h1>
+
+<p>这三款是 Oink 近期最具“策略感”的作品。它们共同的特点是：<strong>规则简单，但每一回合都是心理博弈</strong>。你要猜对手在做什么、对手猜你在猜什么——无限套娃。</p>
+
+<div class="callout">
+  <strong>这节课的承诺：</strong>学完能清晰区分这三款策略游戏的核心差异，在客人说“有没有跟 SCOUT 差不多的轻策”时准确推荐。
+</div>
+
+<h2>第一款：Fafnir · 法夫纳 (2020)</h2>
+
+<div class="callout"><strong>类型：</strong>隐秘竞标 · 市场操控 | <strong>核心问句：</strong>你愿意扔多少宝石来赢，但扔掉的就会影响最终价值？</div>
+
+<h3>背景故事</h3>
+<p>两兄弟继承了会下金蛋的鸡 Fafnir。他们约定：每天两人各自扔一些自己的宝石来竞标，扔得多的拿走 Fafnir 当天下的两颗新宝石。但——宝石的最终价值取决于<strong>最后所有人手里哪种颜色最多</strong>，所以你扔掉的宝石少了，市场价格就变了。</p>
+
+<h3>完整规则</h3>
+
+<h4>组件</h4>
+<ul>
+  <li>80 颗木质宝石：金色 20 颗，红橙黄绿蓝各 12 颗</li>
+  <li>4 个玩家屏风（挡住自己的宝石）</li>
+  <li>Fafnir 板（中央区）、弃料板（丢弃区）</li>
+</ul>
+
+<h4>每轮（每天）流程</h4>
+<ol>
+  <li><strong>Fafnir 下蛋：</strong>从袋中随机抽 2 颗宝石，放在中央 Fafnir 板上</li>
+  <li><strong>暗手出价：</strong>所有玩家同时在拳中握好自己决定丢弃的宝石数量，一起亮出
+    <ul>
+      <li>限制：<strong>不能丢弃与当天 Fafnir 产出同色的宝石</strong></li>
+    </ul>
+  </li>
+  <li><strong>判定赢家：</strong>出价最高者（丢弃数量最多）→ 弃掉出价的宝石，拿走 Fafnir 板上的两颗。其他人收回出价的宝石。</li>
+  <li><strong>平局：</strong>平局者收回宝石，该轮无人赢得</li>
+</ol>
+
+<h4>一轮结束条件</h4>
+<p>当某一种颜色的宝石在弃料板上的数量达到阈值（3 人局为 7 颗），该轮结束，进入计分。</p>
+
+<h4>计分——这才是核心</h4>
+<p>所有人亮出自己的宝石。按<strong>所有玩家合计</strong>中各种颜色的总数量排名：</p>
+
+<table class="score-table">
+  <tr><th>排名</th><th>每颗得分</th></tr>
+  <tr><td>数量最多的颜色</td><td style="color:#2d7d46;font-weight:700;">+3 分</td></tr>
+  <tr><td>数量第二多的颜色</td><td style="color:#2d7d46;font-weight:700;">+2 分</td></tr>
+  <tr><td>其余颜色（第 3/4/5 名）</td><td style="color:#c0392b;font-weight:700;">−1 分</td></tr>
+  <tr><td>金色宝石</td><td style="color:#2d7d46;font-weight:700;">恒为 +1 分</td></tr>
+</table>
+
+<p><strong>这意味着什么？</strong>如果你囤了一大把红色，结果全场加起来红色最多——你的红色就最值钱。但如果别人也在囤红色而你没发现，那你的红色可能变成负分。你必须通过竞标时<strong>主动丢弃某种颜色</strong>来操控市场供应量。</p>
+
+<h4>核心策略</h4>
+<ul>
+  <li><strong>金色安全：</strong>金色永远是 +1，不受市场影响——保守玩家的避风港</li>
+  <li><strong>观察弃料板：</strong>哪些颜色被大量丢弃 → 供应减少 → 更可能变成稀有高分</li>
+  <li><strong>出价即弃牌：</strong>你出价时丢掉的宝石<strong>真的丢了</strong>——不像其他拍卖游戏只是押注</li>
+  <li><strong>控制轮末时机：</strong>当弃料板上某种颜色接近阈值，你可以“推一把”让该轮在你有利时结束</li>
+</ul>
+
+<div class="pitch-box">
+  <strong>💬 30 秒推荐话术：</strong>「Oink 最深的心理博弈。一只鸡每天下两颗宝石，所有人暗手出价竞标——你出的宝石会真的丢掉，丢掉就会改变最终宝石的市值。金色永远值钱，其他颜色价值完全看市场供需。每轮最后才知道哪种颜色最值钱。」<br>
+  <strong>适合客人：</strong>喜欢拍卖/经济博弈、3-4 人心理战、想要“规则短但层次深”的玩家。
+</div>
+
+<h2>第二款：TRND · 趋势 (2024)</h2>
+
+<div class="callout"><strong>类型：</strong>手牌管理 · 成套收集 · 时机判断 | <strong>核心问句：</strong>现在出手拿小分，还是再囤两张博高分？</div>
+
+<h3>一句话理解</h3>
+<p><strong>复古椅子版的 SCOUT——凑齐同形同色出清得分，但时机判断是核心。</strong></p>
+
+<h3>完整规则</h3>
+
+<h4>组件</h4>
+<ul>
+  <li>90 张椅子卡：3 种形状 × 3 种颜色 = <strong>9 种类型</strong>，每种 10 张</li>
+  <li>卡面是复古摩登风的椅子插画</li>
+</ul>
+
+<h4>设置</h4>
+<ul>
+  <li>发牌给每位玩家</li>
+  <li>翻开 8 张组成<strong>市场</strong>（面朝上）</li>
+  <li>剩余为抽牌堆，旁边是弃牌堆</li>
+</ul>
+
+<h4>每回合（二选一）</h4>
+<ol>
+  <li><strong>方案 A：抽未知牌。</strong>从牌堆顶抽一张。</li>
+  <li><strong>方案 B：拿市场牌 + 弃牌。</strong>
+    <ul>
+      <li>从市场中拿<strong>一张</strong>面朝上的牌</li>
+      <li>然后从手中弃掉任意数量的牌到弃牌堆——但弃牌必须<strong>与弃牌堆顶部牌的</strong>颜色或形状<strong>匹配</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<h4>出清（Going Out）</h4>
+<p>当你的手牌<strong>全部为完全相同的牌</strong>（同形且同色），你可以宣布出清，展示手牌。</p>
+
+<p><strong>得分 = 手中牌数的平方：</strong></p>
+<table class="score-table">
+  <tr><td>3 张</td><td>3² = <strong>9 分</strong></td></tr>
+  <tr><td>4 张</td><td>4² = <strong>16 分</strong></td></tr>
+  <tr><td>5 张</td><td>5² = <strong>25 分</strong></td></tr>
+  <tr><td>6 张</td><td>6² = <strong>36 分</strong></td></tr>
+</table>
+
+<p><strong>残酷的规则：</strong>每轮最后一个没出清的人 → <strong>0 分</strong>。不管你手里有多少牌。</p>
+
+<h4>一局结束</h4>
+<p>3 人局先到 <strong>100 分</strong>者获胜。通常需要多轮。</p>
+
+<h4>核心策略张力</h4>
+<p>平方计分意味着<strong>多囤一张回报巨大</strong>（4→5 张从 16 跳到 25 分）。但每多等一轮，就多一分被别人的风险。你看着市场里有一张你需要的椅子，但弃牌堆顶的颜色不对——你等，还是冒险抽未知牌？</p>
+
+<div class="pitch-box">
+  <strong>💬 30 秒推荐话术：</strong>「Oink 的轻策神作。你要凑齐同款复古椅子然后一次性出清——但出清时手里牌越多分越高（平方计分），可万一别人先出清了你就零分。跟 SCOUT 同级别的好玩但更看重时机判断。」<br>
+  <strong>适合客人：</strong>喜欢 SCOUT / 牛头王 / 轻策手牌管理的玩家、3-5 人的中度策略局。
+</div>
+
+<h2>第三款：Fairtrade Souvenirs · 公平贸易纪念品 (2025)</h2>
+
+<div class="callout"><strong>类型：</strong>掷骰移动 · 成套收集 · 风险回报 | <strong>核心问句：</strong>花双倍钱买公平贸易标章的商品——值不值？</div>
+
+<h3>背景</h3>
+<p>改编自 2024 年的《威尼斯纪念品》（Souvenirs from Venice），背景换到日本镰仓市——日本第 7 个获得公平贸易城市认证的地方。包装使用甘蔗渣纸和 FSC 认证材料。</p>
+
+<h3>完整规则</h3>
+
+<h4>组件</h4>
+<ul>
+  <li>54 块地点/纪念品板块（排列成路径）</li>
+  <li>5 个自行车棋子</li>
+  <li>40 个金币</li>
+  <li>1 颗骰子</li>
+</ul>
+
+<h4>目标</h4>
+<p>收集 3 件同款纪念品为一套，<strong>在火车出发前回到车站</strong>。没回到的直接出局（零分）。</p>
+
+<h4>每回合流程</h4>
+<ol>
+  <li><strong>掷骰子</strong> → 移动自行车相应的步数（沿路径前进）</li>
+  <li><strong>到达板块后：</strong>
+    <ul>
+      <li>查看该板块上的纪念品类型（6 种：糖果、巧克力、咖啡、蜂蜜、肥皂、红酒）</li>
+      <li>决定是否<strong>购买</strong></li>
+    </ul>
+  </li>
+  <li><strong>购买：</strong>
+    <ul>
+      <li>普通纪念品 → 1 金币</li>
+      <li>带<strong>公平贸易标章</strong>的纪念品 → <strong>2 金币</strong>（每种纪念品有 2 块特殊标章版）</li>
+    </ul>
+  </li>
+  <li>可以将不需要的纪念品<strong>卖给空板块</strong>换成金币</li>
+</ol>
+
+<h4>计分</h4>
+<ul>
+  <li>每套 3 件同款纪念品 → 基础分</li>
+  <li>套装中<strong>含有公平贸易标章的纪念品 → 额外加分</strong></li>
+  <li>没回到车站的人 → <strong>0 分</strong></li>
+</ul>
+
+<h4>路径上的危险</h4>
+<ul>
+  <li>猫和喜欢猫的小孩会在路径上制造意外</li>
+  <li>板块会被逐渐翻开——整个路径就像倒计时，火车越来越近</li>
+</ul>
+
+<h4>核心策略</h4>
+<ul>
+  <li><strong>公平贸易的取舍：</strong>花 2 金币买标章版，等于少买一件普通纪念品。但如果凑成套装，加分远超这个成本</li>
+  <li><strong>时间管理：</strong>不是每块都值得停——走太慢会被火车丢下，走太快收集不够</li>
+  <li><strong>信息博弈：</strong>你花 2 金币的那一刻，其他玩家知道你刚买了公平贸易版</li>
+</ul>
+
+<div class="pitch-box">
+  <strong>💬 30 秒推荐话术：</strong>「在镰仓骑自行车买纪念品。掷骰子走格子，碰到喜欢的就花钱买，3 个同款凑一套。有个很妙的公平贸易机制——你可以多花钱买带标章的特殊版，风险高但加分也多。但必须在火车开走前回到车站！」<br>
+  <strong>适合客人：</strong>家庭亲子、女性玩家、日本旅行爱好者、想要“轻度策略 + 好看主题”的客人。环保包装也是卖点。
+</div>
+
+<h2>三款策略博弈对比</h2>
+
+<table>
+  <tr><th></th><th>Fafnir</th><th>TRND</th><th>Fairtrade Souvenirs</th></tr>
+  <tr><td><strong>核心机制</strong></td><td>隐秘竞标 + 市场操控</td><td>手牌管理 + 时机判断</td><td>掷骰移动 + 风险回报</td></tr>
+  <tr><td><strong>随机性</strong></td><td>中（宝石抽袋）</td><td>低（卡牌分布已知）</td><td>高（骰子驱动）</td></tr>
+  <tr><td><strong>玩家互动</strong></td><td>强（竞标心理战）</td><td>中（抢先出清）</td><td>弱（各骑各的车）</td></tr>
+  <tr><td><strong>复杂度</strong></td><td>★★★☆☆</td><td>★★☆☆☆</td><td>★★☆☆☆</td></tr>
+  <tr><td><strong>一局时长</strong></td><td>20min × 3 轮</td><td>30min</td><td>30min</td></tr>
+  <tr><td><strong>计分特色</strong></td><td>市场供需决定价值</td><td>平方计分 + 末位零分</td><td>风险回报 + 未返回零分</td></tr>
+</table>
+
+<h2>实战演练</h2>
+
+<div class="quiz">
+  <h3>客人进店——你推哪款？</h3>
+
+  <div class="question" id="q1">场景 1：三个看起来常玩桌游的朋友，其中一个说“我们最喜欢玩 SCOUT，还有类似的手牌管理轻策吗？”</div>
+  <div class="options" data-q="q1">
+    <div class="option" data-a="a">Fafnir 法夫纳</div>
+    <div class="option" data-a="b">TRND 趋势</div>
+    <div class="option" data-a="c">Fairtrade Souvenirs 公平贸易纪念品</div>
+  </div>
+  <div class="feedback" id="fb-q1"></div>
+
+  <div class="question" id="q2">场景 2：客人说“我想要那种互相猜心思的——我知道你在想什么、你知道我知道你在想什么的博弈感”。</div>
+  <div class="options" data-q="q2">
+    <div class="option" data-a="a">TRND 趋势</div>
+    <div class="option" data-a="b">Fairtrade Souvenirs 公平贸易纪念品</div>
+    <div class="option" data-a="c">Fafnir 法夫纳</div>
+  </div>
+  <div class="feedback" id="fb-q2"></div>
+
+  <div class="question" id="q3">场景 3：一位妈妈带 10 岁的女儿，妈妈说“我们想去镰仓旅游，先买点相关的”。</div>
+  <div class="options" data-q="q3">
+    <div class="option" data-a="a">Fafnir 法夫纳</div>
+    <div class="option" data-a="b">TRND 趋势</div>
+    <div class="option" data-a="c">Fairtrade Souvenirs 公平贸易纪念品</div>
+  </div>
+  <div class="feedback" id="fb-q3"></div>
+
+  <div class="question" id="q4">场景 4：四个经常打麻将的叔伯辈客人，说“有没有刺激一点、可以赌一赌的游戏？”</div>
+  <div class="options" data-q="q4">
+    <div class="option" data-a="a">Fairtrade Souvenirs 公平贸易纪念品</div>
+    <div class="option" data-a="b">Fafnir 法夫纳</div>
+    <div class="option" data-a="c">TRND 趋势</div>
+  </div>
+  <div class="feedback" id="fb-q4"></div>
+
+  <button id="check-btn">检查答案</button>
+</div>
+
+<h2>Oink 10 款学完总结</h2>
+
+<p>三节课下来，你学了 Oink 2020-2026 年全部 10 款重点游戏。回顾一下框架：</p>
+
+<table>
+  <tr><th>类别</th><th>游戏</th><th>推荐给……</th></tr>
+  <tr><td rowspan="4">🤝 合作</td><td>Moon Adventure</td><td>要深度策略合作的硬核玩家</td></tr>
+  <tr><td>HEY YO</td><td>要嗨要吵的派对人群</td></tr>
+  <tr><td>Order Overload: Cafe</td><td>要轻松爆笑的家庭/情侣</td></tr>
+  <tr><td>The Frozen Passage</td><td>要限沟通默契的尝鲜玩家</td></tr>
+  <tr><td rowspan="3">⚡ 反应拼图</td><td>Meow Tiles</td><td>猫奴 / 亲子 / 暖场破冰</td></tr>
+  <tr><td>Town 66</td><td>数独迷 / 安静的逻辑型玩家</td></tr>
+  <tr><td>Compress</td><td>喜欢脑洞创意的玩家</td></tr>
+  <tr><td rowspan="3">🧠 策略博弈</td><td>Fafnir</td><td>喜欢拍卖心理战的玩家</td></tr>
+  <tr><td>TRND</td><td>SCOUT 爱好者 / 轻策手牌管理</td></tr>
+  <tr><td>Fairtrade Souvenirs</td><td>旅行主题 / 家庭亲子 / 轻度策略</td></tr>
+</table>
+
+<div class="callout">
+  <strong>店员黄金法则：</strong>先问客人三个问题——几个人、想要什么氛围（热闹/安静/认真）、之前玩过什么喜欢的游戏。三个答案就能把 10 款缩小到 1-2 款。不要一股脑把 10 款全介绍一遍。
+</div>
+
+<h2>推荐阅读</h2>
+<ul>
+  <li><a href="https://oinkgames.com/en/games/analog/fafnir/" target="_blank">Fafnir 官方页面</a></li>
+  <li><a href="https://oinkgames.com/en/games/analog/trnd/" target="_blank">TRND 官方页面</a></li>
+  <li><a href="https://oinkgames.com/en/games/analog/fair-trade-souvenirs/" target="_blank">Fairtrade Souvenirs 官方页面</a></li>
+  <li><a href="https://boardgamegeek.com/boardgame/433075/trnd" target="_blank">BGG: TRND</a></li>
+  <li><a href="https://boardgamegeek.com/boardgame/445071/fair-trade-souvenirs" target="_blank">BGG: Fairtrade Souvenirs</a></li>
+</ul>
+
+<div class="followup">
+  <p>Oink 10 款学完了。接下来可以深入：想要了解 Oink 更早的经典（海底探险、假艺术家、Startups 等）、其他日本小盒出版社、或者练习针对具体客人的推荐话术。随时说一声。</p>
+  <p><a href="../reference/quick-reference.html">📋 店员速查表（随时查阅）</a> · <a href="../index.html">🎯 使命</a></p>
+</div>
+
+<div class="lesson-nav">
+  <span><a href="02-speed-puzzle-games.html">← 第二课：反应拼图三剑客</a></span>
+  <span><a href="../reference/quick-reference.html">📋 速查表</a></span>
+</div>
+
+<script>
+document.querySelectorAll('.quiz .option').forEach(function(opt) {
+  opt.addEventListener('click', function() {
+    const qid = this.parentElement.getAttribute('data-q');
+    const siblings = this.parentElement.querySelectorAll('.option');
+    siblings.forEach(function(s) { s.classList.remove('selected'); });
+    this.classList.add('selected');
+  });
+});
+
+document.getElementById('check-btn').addEventListener('click', function() {
+  const answers = {
+    q1: { correct: 'b', explanation: '✅ TRND 最接近 SCOUT——都是手牌管理 + 成套收集，都要抢在别人前面出清，都有平方计分。直接说“跟 SCOUT 差不多但更看时机判断”。' },
+    q2: { correct: 'c', explanation: '✅ Fafnir 是这三款里心理博弈最深的。暗手出价、市场操控、你知道别人在猜你的出价策略——完美的套娃博弈。' },
+    q3: { correct: 'c', explanation: '✅ Fairtrade Souvenirs 背景就是镰仓！亲子友好、旅行主题、环保包装讨妈妈欢心。而且规则简单，10 岁完全能玩。' },
+    q4: { correct: 'c', explanation: '✅ TRND 最合适——“赌一赌”体现在平方计分的 push-your-luck 机制，多囤一张收益巨大但风险也大，很像麻将里的听牌加番。Fafnir 也不错但更偏经济博弈而非运气刺激。' }
+  };
+
+  Object.keys(answers).forEach(function(qid) {
+    const fb = document.getElementById('fb-' + qid);
+    const options = document.querySelectorAll('[data-q="' + qid + '"] .option');
+    const correct = answers[qid].correct;
+
+    options.forEach(function(opt) {
+      opt.style.pointerEvents = 'none';
+      if (opt.getAttribute('data-a') === correct) opt.classList.add('correct');
+    });
+
+    const selected = document.querySelector('[data-q="' + qid + '"] .option.selected');
+    if (selected && selected.getAttribute('data-a') === correct) {
+      fb.innerHTML = answers[qid].explanation;
+      fb.style.color = '#2d7d46';
+    } else if (selected) {
+      fb.innerHTML = '❌ 不太对。' + answers[qid].explanation;
+      fb.style.color = '#c0392b';
+    } else {
+      fb.innerHTML = '请先选择一个答案。' + answers[qid].explanation;
+      fb.style.color = '#666';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
